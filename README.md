@@ -1,2 +1,3 @@
 # Numerical-Aperture
-It find the numerical Aperture along with standard errors
+It find the numerical Aperture.
+It is written in HTML ,CSS and Java-Script .
