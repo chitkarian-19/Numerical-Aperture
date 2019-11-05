@@ -1,0 +1,142 @@
+<html>
+  <head>
+     <style >
+	 
+	 </style>
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	 <script>
+	 $(document).ready(function(){
+          $(".btn").click(function(){
+             var l1 = $("#ex11").val();
+			 var w1 = $("#ex12").val();
+			 var l2 = $("#ex21").val();
+			 var w2 = $("#ex22").val();
+			 var l3 = $("#ex31").val();
+			 var w3 = $("#ex32").val();
+			 var l4 = $("#ex41").val();
+			 var w4 = $("#ex42").val();
+			 var ml = (l1+l2+l3+l4)/4;
+			 var mw = (w1+w2+w3+w4)/4;
+			 var NA = (mw/(Math.sqrt(4*ml*ml+mw*mw))).toFixed(3);
+			 $("#an1").val(NA);
+			 $("#an2").val((Math.asin(NA)*180/3.14).toFixed(2));
+			 $("#e1").text($("#e1").text()+" "+(((0.424-NA)/0.424)*100).toFixed(2)+"%");
+			 $("#e2").text($("#e2").text()+" "+(((25.143-((Math.asin(NA)*180)/3.14))/25.143)*100).toFixed(2)+"%");
+             });
+           });
+	 </script>
+  </head>
+  <body>
+     <div class="container " style="padding:10px;border-radius:10px;">
+	     </br></br>
+	     <h3 style="font-weight:bold;text-align:center;background-color:#FFBF00;padding:10px;border-radius:10px;">To determine the Numerical aperture and Acceptance Angle of short-range optical Fibre</h3>
+		 </br></br>
+		 <div class ="w3-container w3-pale-red w3-card" style="padding-top:10px;">
+		 <div class="w3-container w3-red" style="border-radius:10px;">
+		 <h2 style="font-weight:bold;text-decoration:underline;">Objective:</h2>
+		 <p>
+		 In order to transmit a signal through optical fibre the light ray should strike with acceptance
+         angle of fibre at core-cladding interface. The sine of the acceptance angle is called numerical
+         aperture of the fibre. We have an optical fibre cable of length 1 metre and a white screen with
+         four concentric circles of 10mm, 15mm, 20mm and 25 mm diameter. Using optical fibre
+         trainer kit, determine the numerical aperture of given optical fibre cable.
+		 </p>
+		 </div></br></br>
+		 <div class="w3-container w3-green" style="border-radius:10px;">
+		 <h2 style="font-weight:bold;text-decoration:underline;">
+		 Apparatus:</h2>
+        <p>An optical fibre cable, optical fibre trainer board, numerical aperture jig white screen and
+            connecting wires.</p>
+	     </div></br></br>
+		 <div class="w3-container w3-cyan " style="border-radius:10px;">
+      <h2 style="font-weight:bold;text-decoration:underline;color:white;">Formulas:</h2>
+  <p style="color:white;">The numerical aperture (NA) of the optical fibre can be calculated using formula, i.e.,Numerical Aperture = Sin(a) =W/sqrt(4L^2+W^2),where 'a' is the acceptance angle of incidence at the input end of the optical fibre, L, is the
+       distance of the screen from the fibre end and W is the diameter of the spot.</p>
+	   </div>
+       </br>
+         <p style="font-size:18px;margin:10px;">Numerical aperture of an optical fibre is defined as the light gathering ability of the fibre.
+             Numerical aperture also refers to the maximum angle at which the light incident on the fibre
+             end is totally internally reflected and is properly transmitted along the fibre. The cone formed
+              by the rotation of this angle along the axis of the fibre is the cone of the acceptance of the
+             fibre. The light ray should strike the fibre end within this cone of acceptance otherwise it is
+             refracted out of the fibre. Numerically, it is also defined as the sine of the acceptance angle.
+         </p> </br>
+       <img src="1.png" class="img-thumbnail" alt="Cinque Terre" style="margin-left:100px;"></br></br></br>
+	   </div>
+	   </br>
+	   </br>
+        <div class ="w3-container w3-pale-yellow w3-card" style="margin-bottom:10px;">
+       <h2 class ="w3-container w3-green" style="margin:10px;width:220px;border-radius:6px;">Observations:</h2>
+	   </br>
+	   <p>&nbsp;Enter the readings after doing the experiment:</p>
+	    <form>
+    <div class="form-group row">
+      
+      <div class="col-xs-4">
+        <label for="ex2">1. L(mm)</label>
+        <input class="form-control" id="ex11" type="number" required>
+      </div>
+      <div class="col-xs-4">
+        <label for="ex2">W(mm)</label>
+        <input class="form-control" id="ex12" type="number" required>
+      </div>
+	  
+    </div>
+	<div class="form-group row">
+      
+      <div class="col-xs-4">
+        <label for="ex2">2. L(mm)</label>
+        <input class="form-control" id="ex21" type="number" required>
+      </div>
+      <div class="col-xs-4">
+        <label for="ex2">W(mm)</label>
+        <input class="form-control" id="ex22" type="number" required>
+      </div>
+	  
+    </div>
+	<div class="form-group row">
+      
+      <div class="col-xs-4">
+        <label for="ex2">3. L(mm)</label>
+        <input class="form-control" id="ex31" type="number" required>
+      </div>
+      <div class="col-xs-4">
+        <label for="ex2">W(mm)</label>
+        <input class="form-control" id="ex32" type="number" required>
+      </div>
+	  
+    </div>
+	<div class="form-group row">
+      
+      <div class="col-xs-4">
+        <label for="ex2">4. L(mm)</label>
+        <input class="form-control" id="ex41" type="number" required>
+      </div>
+      <div class="col-xs-4">
+        <label for="ex2">W(mm)</label>
+        <input class="form-control" id="ex42" type="number" required>
+      </div>
+	  
+    </div>
+	
+  </form>
+        <button  class="btn btn-info" value="See Output" class ="w3-container w3-green" style="margin:10px;width:220px;border-radius:6px;">See Output
+     </button>
+        <p class ="text-danger" style="font-weight:bold;" >Numerical Apertutre:</p>
+		<input class="form-control" id="an1" type="number" style="width:250px;" >
+		</br>
+		<p class ="text-danger" style="font-weight:bold;">Critical Angle(degrees):</p>
+		<input class="form-control" id="an2" type="number" style="width:250px;" >
+		</br>
+		<h3 class="text-muted" style="font-weight:bold;">Error Analysis:</h3>
+		<p id="e1" class=""> 1) Error Percentage in Numerical Aperture is :</p>
+		<p id="e2" class=""> 2) Error Percentage in Critical Angle is :</p>
+		
+		</div>
+		<h1 class ="text-info" style="font-weight:bold;font-size:70px;text-align:center;">THANKYOU</h1>
+	 </div>
+  </body>
+</html>
